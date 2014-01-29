@@ -70,6 +70,9 @@
                                 <state key="normal" image="menu_music.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eyO-yh-Vla" kind="push" id="B0E-KA-iYo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gy-04-5ad">
                                 <rect key="frame" x="50" y="218" width="100" height="100"/>
@@ -118,6 +121,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDG-gT-HUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100" y="123"/>
+        </scene>
+        <!--Audio View Controller - Audio player-->
+        <scene sceneID="rMM-6S-ZVR">
+            <objects>
+                <tableViewController id="eyO-yh-Vla" customClass="TAAudioViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="J7n-Rk-4ff">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AudioCell" rowHeight="60" id="lgs-gM-IjO" customClass="TAAudioFileCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lgs-gM-IjO" id="5zC-pN-cti">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efb-Bq-TPt">
+                                            <rect key="frame" x="20" y="6" width="145" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="145" id="CGf-1i-JYK"/>
+                                                <constraint firstAttribute="height" constant="21" id="zDn-4S-6aa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G73-qJ-j4i">
+                                            <rect key="frame" x="229" y="6" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Play">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Efb-Bq-TPt" firstAttribute="top" secondItem="5zC-pN-cti" secondAttribute="top" constant="6" id="NGd-Is-yag"/>
+                                        <constraint firstItem="Efb-Bq-TPt" firstAttribute="leading" secondItem="5zC-pN-cti" secondAttribute="leading" constant="20" id="ZhL-sl-YiC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Efb-Bq-TPt" id="VG9-Uf-oQ5"/>
+                                    <outlet property="playButton" destination="G73-qJ-j4i" id="Y7o-sH-cFw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eyO-yh-Vla" id="bfz-2x-Vgd"/>
+                            <outlet property="delegate" destination="eyO-yh-Vla" id="Gob-qn-mYH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Audio player" id="2fb-FC-YcV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHK-8F-OWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="124"/>
         </scene>
         <!--Contacts View Controller - All contacts-->
         <scene sceneID="CZo-aA-9lF">

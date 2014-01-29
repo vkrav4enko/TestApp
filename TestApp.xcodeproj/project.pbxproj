@@ -37,6 +37,11 @@
 		E7EB6A5A1899701300FDF783 /* TAContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EB6A591899701300FDF783 /* TAContactsViewController.m */; };
 		E7EB6A5C1899714300FDF783 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB6A5B1899714300FDF783 /* AddressBook.framework */; };
 		E7EB6A5E1899742400FDF783 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB6A5D1899742400FDF783 /* AddressBookUI.framework */; };
+		E7EB6A61189989AF00FDF783 /* TAAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EB6A60189989AF00FDF783 /* TAAudioViewController.m */; };
+		E7EB6A64189989FD00FDF783 /* TAAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EB6A63189989FD00FDF783 /* TAAudioPlayer.m */; };
+		E7EB6A6618998D1600FDF783 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB6A6518998D1600FDF783 /* AVFoundation.framework */; };
+		E7EB6A6818999C9100FDF783 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB6A6718999C9100FDF783 /* MobileCoreServices.framework */; };
+		E7EB6A6B18999DCA00FDF783 /* TAAudioFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EB6A6A18999DCA00FDF783 /* TAAudioFileCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,14 @@
 		E7EB6A591899701300FDF783 /* TAContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAContactsViewController.m; path = Controllers/TAContactsViewController.m; sourceTree = "<group>"; };
 		E7EB6A5B1899714300FDF783 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		E7EB6A5D1899742400FDF783 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		E7EB6A5F189989AF00FDF783 /* TAAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAAudioViewController.h; path = Controllers/TAAudioViewController.h; sourceTree = "<group>"; };
+		E7EB6A60189989AF00FDF783 /* TAAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAAudioViewController.m; path = Controllers/TAAudioViewController.m; sourceTree = "<group>"; };
+		E7EB6A62189989FD00FDF783 /* TAAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAAudioPlayer.h; path = API/TAAudioPlayer.h; sourceTree = "<group>"; };
+		E7EB6A63189989FD00FDF783 /* TAAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAAudioPlayer.m; path = API/TAAudioPlayer.m; sourceTree = "<group>"; };
+		E7EB6A6518998D1600FDF783 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E7EB6A6718999C9100FDF783 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E7EB6A6918999DCA00FDF783 /* TAAudioFileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAAudioFileCell.h; path = Views/TAAudioFileCell.h; sourceTree = "<group>"; };
+		E7EB6A6A18999DCA00FDF783 /* TAAudioFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAAudioFileCell.m; path = Views/TAAudioFileCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EB6A6818999C9100FDF783 /* MobileCoreServices.framework in Frameworks */,
+				E7EB6A6618998D1600FDF783 /* AVFoundation.framework in Frameworks */,
 				E7EB6A5E1899742400FDF783 /* AddressBookUI.framework in Frameworks */,
 				E7EB6A5C1899714300FDF783 /* AddressBook.framework in Frameworks */,
 				E7EB6A2E1899000600FDF783 /* MapKit.framework in Frameworks */,
@@ -139,6 +154,8 @@
 		E7EB69EB1898ED0100FDF783 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7EB6A6718999C9100FDF783 /* MobileCoreServices.framework */,
+				E7EB6A6518998D1600FDF783 /* AVFoundation.framework */,
 				E7EB6A5D1899742400FDF783 /* AddressBookUI.framework */,
 				E7EB6A5B1899714300FDF783 /* AddressBook.framework */,
 				E7EB6A2D1899000600FDF783 /* MapKit.framework */,
@@ -210,6 +227,8 @@
 				E7EB6A301899007800FDF783 /* TAMapViewController.m */,
 				E7EB6A581899701300FDF783 /* TAContactsViewController.h */,
 				E7EB6A591899701300FDF783 /* TAContactsViewController.m */,
+				E7EB6A5F189989AF00FDF783 /* TAAudioViewController.h */,
+				E7EB6A60189989AF00FDF783 /* TAAudioViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +236,8 @@
 		E7EB6A281898FDF300FDF783 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E7EB6A6918999DCA00FDF783 /* TAAudioFileCell.h */,
+				E7EB6A6A18999DCA00FDF783 /* TAAudioFileCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -235,6 +256,8 @@
 			children = (
 				E7EB69FB1898ED0100FDF783 /* TAAppDelegate.h */,
 				E7EB69FC1898ED0100FDF783 /* TAAppDelegate.m */,
+				E7EB6A62189989FD00FDF783 /* TAAudioPlayer.h */,
+				E7EB6A63189989FD00FDF783 /* TAAudioPlayer.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -367,7 +390,10 @@
 				E7EB69F91898ED0100FDF783 /* main.m in Sources */,
 				E7EB6A311899007800FDF783 /* TAMapViewController.m in Sources */,
 				E7EB69FD1898ED0100FDF783 /* TAAppDelegate.m in Sources */,
+				E7EB6A6B18999DCA00FDF783 /* TAAudioFileCell.m in Sources */,
+				E7EB6A64189989FD00FDF783 /* TAAudioPlayer.m in Sources */,
 				E7EB6A5A1899701300FDF783 /* TAContactsViewController.m in Sources */,
+				E7EB6A61189989AF00FDF783 /* TAAudioViewController.m in Sources */,
 				E7EB6A571899126600FDF783 /* TAAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
