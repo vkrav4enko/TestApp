@@ -11,5 +11,7 @@
 @interface TAAudioFileCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+
 
 @end

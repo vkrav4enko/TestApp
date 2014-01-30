@@ -9,7 +9,7 @@
 #import "TAAudioPlayer.h"
 
 @interface TAAudioPlayer ()
-@property (nonatomic, strong) AVAudioPlayer *player;
+
 @end
 
 @implementation TAAudioPlayer
@@ -26,7 +26,6 @@
 
 - (void)playFile:(NSString *)soundFileName
 {
-    _currentFile = [soundFileName lastPathComponent];
     NSError *error = nil;
     NSURL *url = [NSURL fileURLWithPath:soundFileName];
     _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];

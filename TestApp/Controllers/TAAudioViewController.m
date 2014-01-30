@@ -49,6 +49,12 @@
         }
     }
     
+    NSTimer * myTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                         target:self
+                                                       selector:@selector(updateProgressView)
+                                                       userInfo:nil
+                                                        repeats:YES];
+    
     
 }
 
@@ -88,8 +94,17 @@
 {
     if([[TAAudioPlayer sharedPlayer] isPlaying])
     {
+        NSString *currentFile = [[[[TAAudioPlayer sharedPlayer] player] url] path];
         [[TAAudioPlayer sharedPlayer] stopPlaing];
-        [self.tableView reloadData];
+        NSUInteger index = [_files indexOfObject:currentFile];
+        TAAudioFileCell *cell = (TAAudioFileCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+        [cell.playButton setTitle:@"Start" forState:UIControlStateNormal];
+        cell.progressView.hidden = YES;
+        if(![currentFile isEqualToString:_files[sender.tag]])
+        {
+            [sender setTitle:@"Stop" forState:UIControlStateNormal];
+            [[TAAudioPlayer sharedPlayer] playFile:_files[sender.tag]];
+        }
     }
     else
     {
@@ -97,6 +112,17 @@
         [[TAAudioPlayer sharedPlayer] playFile:_files[sender.tag]];
     }
     
+}
+
+- (void)updateProgressView{
+    float totalTime = [[[TAAudioPlayer sharedPlayer] player] duration];
+    float progress = [[[TAAudioPlayer sharedPlayer] player] currentTime] / totalTime;
+    
+    NSString *currentFile = [[[[TAAudioPlayer sharedPlayer] player] url] path];
+    NSUInteger index = [_files indexOfObject:currentFile];
+    TAAudioFileCell *cell = (TAAudioFileCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+    cell.progressView.hidden = NO;
+    cell.progressView.progress = progress;
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

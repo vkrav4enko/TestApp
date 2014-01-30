@@ -218,6 +218,10 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
+                                        <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="061-IX-o5N">
+                                            <rect key="frame" x="20" y="43" width="145" height="2"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </progressView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Efb-Bq-TPt" firstAttribute="top" secondItem="5zC-pN-cti" secondAttribute="top" constant="6" id="NGd-Is-yag"/>
@@ -227,6 +231,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="Efb-Bq-TPt" id="VG9-Uf-oQ5"/>
                                     <outlet property="playButton" destination="G73-qJ-j4i" id="Y7o-sH-cFw"/>
+                                    <outlet property="progressView" destination="061-IX-o5N" id="MSw-n2-9nt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

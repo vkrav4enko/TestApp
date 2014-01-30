@@ -10,9 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface TAAudioPlayer : NSObject
-@property (nonatomic, strong) NSMutableDictionary *audioFiles;
-@property (nonatomic, copy) NSString *currentFile;
-
+@property (nonatomic, strong) AVAudioPlayer *player;
 +(TAAudioPlayer *) sharedPlayer;
 
 - (void)playFile:(NSString*)soundFileName;
