@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E705752B189A2703000256BA /* TAImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E705752A189A2703000256BA /* TAImagesViewController.m */; };
+		E705752E189A274A000256BA /* TAImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E705752D189A274A000256BA /* TAImageCell.m */; };
+		E7057531189A324C000256BA /* TAImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E7057530189A324C000256BA /* TAImageLoader.m */; };
 		E7EB69ED1898ED0100FDF783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB69EC1898ED0100FDF783 /* Foundation.framework */; };
 		E7EB69EF1898ED0100FDF783 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB69EE1898ED0100FDF783 /* CoreGraphics.framework */; };
 		E7EB69F11898ED0100FDF783 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB69F01898ED0100FDF783 /* UIKit.framework */; };
@@ -55,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7057529189A2703000256BA /* TAImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAImagesViewController.h; path = Controllers/TAImagesViewController.h; sourceTree = "<group>"; };
+		E705752A189A2703000256BA /* TAImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAImagesViewController.m; path = Controllers/TAImagesViewController.m; sourceTree = "<group>"; };
+		E705752C189A274A000256BA /* TAImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAImageCell.h; path = Views/TAImageCell.h; sourceTree = "<group>"; };
+		E705752D189A274A000256BA /* TAImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAImageCell.m; path = Views/TAImageCell.m; sourceTree = "<group>"; };
+		E705752F189A324C000256BA /* TAImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAImageLoader.h; path = API/TAImageLoader.h; sourceTree = "<group>"; };
+		E7057530189A324C000256BA /* TAImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAImageLoader.m; path = API/TAImageLoader.m; sourceTree = "<group>"; };
 		E7EB69E91898ED0100FDF783 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EB69EC1898ED0100FDF783 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7EB69EE1898ED0100FDF783 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -229,6 +238,8 @@
 				E7EB6A591899701300FDF783 /* TAContactsViewController.m */,
 				E7EB6A5F189989AF00FDF783 /* TAAudioViewController.h */,
 				E7EB6A60189989AF00FDF783 /* TAAudioViewController.m */,
+				E7057529189A2703000256BA /* TAImagesViewController.h */,
+				E705752A189A2703000256BA /* TAImagesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +249,8 @@
 			children = (
 				E7EB6A6918999DCA00FDF783 /* TAAudioFileCell.h */,
 				E7EB6A6A18999DCA00FDF783 /* TAAudioFileCell.m */,
+				E705752C189A274A000256BA /* TAImageCell.h */,
+				E705752D189A274A000256BA /* TAImageCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -258,6 +271,8 @@
 				E7EB69FC1898ED0100FDF783 /* TAAppDelegate.m */,
 				E7EB6A62189989FD00FDF783 /* TAAudioPlayer.h */,
 				E7EB6A63189989FD00FDF783 /* TAAudioPlayer.m */,
+				E705752F189A324C000256BA /* TAImageLoader.h */,
+				E7057530189A324C000256BA /* TAImageLoader.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -390,10 +405,13 @@
 				E7EB69F91898ED0100FDF783 /* main.m in Sources */,
 				E7EB6A311899007800FDF783 /* TAMapViewController.m in Sources */,
 				E7EB69FD1898ED0100FDF783 /* TAAppDelegate.m in Sources */,
+				E705752B189A2703000256BA /* TAImagesViewController.m in Sources */,
 				E7EB6A6B18999DCA00FDF783 /* TAAudioFileCell.m in Sources */,
 				E7EB6A64189989FD00FDF783 /* TAAudioPlayer.m in Sources */,
+				E705752E189A274A000256BA /* TAImageCell.m in Sources */,
 				E7EB6A5A1899701300FDF783 /* TAContactsViewController.m in Sources */,
 				E7EB6A61189989AF00FDF783 /* TAAudioViewController.m in Sources */,
+				E7057531189A324C000256BA /* TAImageLoader.m in Sources */,
 				E7EB6A571899126600FDF783 /* TAAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,6 +621,7 @@
 				E7EB6A201898ED0100FDF783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7EB6A211898ED0100FDF783 /* Build configuration list for PBXNativeTarget "TestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -611,6 +630,7 @@
 				E7EB6A231898ED0100FDF783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
