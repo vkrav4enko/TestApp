@@ -9,7 +9,7 @@
 #import "TAAudioPlayer.h"
 
 @interface TAAudioPlayer ()
-
+@property (nonatomic, strong) AVAudioPlayer *player;
 @end
 
 @implementation TAAudioPlayer
@@ -45,6 +45,21 @@
 - (BOOL)isPlaying
 {
     return [_player isPlaying];
+}
+
+- (NSString *)currentFile
+{
+    return _player.url.path;
+}
+
+- (float)duration
+{
+    return _player.duration;
+}
+
+- (float)currentTime
+{
+    return _player.currentTime;
 }
 
 @end

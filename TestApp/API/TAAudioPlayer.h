@@ -10,11 +10,14 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface TAAudioPlayer : NSObject
-@property (nonatomic, strong) AVAudioPlayer *player;
+
 +(TAAudioPlayer *) sharedPlayer;
 
 - (void)playFile:(NSString*)soundFileName;
 - (void)stopPlaing;
 - (BOOL)isPlaying;
+- (NSString *) currentFile;
+- (float) duration;
+- (float) currentTime;
 
 @end

@@ -94,7 +94,7 @@
 {
     if([[TAAudioPlayer sharedPlayer] isPlaying])
     {
-        NSString *currentFile = [[[[TAAudioPlayer sharedPlayer] player] url] path];
+        NSString *currentFile = [[TAAudioPlayer sharedPlayer] currentFile];
         [[TAAudioPlayer sharedPlayer] stopPlaing];
         NSUInteger index = [_files indexOfObject:currentFile];
         TAAudioFileCell *cell = (TAAudioFileCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
@@ -115,10 +115,10 @@
 }
 
 - (void)updateProgressView{
-    float totalTime = [[[TAAudioPlayer sharedPlayer] player] duration];
-    float progress = [[[TAAudioPlayer sharedPlayer] player] currentTime] / totalTime;
+    float totalTime = [[TAAudioPlayer sharedPlayer] duration];
+    float progress = [[TAAudioPlayer sharedPlayer] currentTime] / totalTime;
     
-    NSString *currentFile = [[[[TAAudioPlayer sharedPlayer] player] url] path];
+    NSString *currentFile = [[TAAudioPlayer sharedPlayer] currentFile];
     NSUInteger index = [_files indexOfObject:currentFile];
     TAAudioFileCell *cell = (TAAudioFileCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
     cell.progressView.hidden = NO;
