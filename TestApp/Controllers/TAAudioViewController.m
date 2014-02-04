@@ -71,6 +71,11 @@
     return 1;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[TAAudioPlayer sharedPlayer] stopPlaing];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _files.count;
