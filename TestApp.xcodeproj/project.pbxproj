@@ -10,6 +10,10 @@
 		E705752B189A2703000256BA /* TAImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E705752A189A2703000256BA /* TAImagesViewController.m */; };
 		E705752E189A274A000256BA /* TAImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E705752D189A274A000256BA /* TAImageCell.m */; };
 		E7057531189A324C000256BA /* TAImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E7057530189A324C000256BA /* TAImageLoader.m */; };
+		E786D51818A0D4E000586A8E /* TACameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E786D51618A0D4E000586A8E /* TACameraViewController.m */; };
+		E786D51918A0D4E000586A8E /* TACameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E786D51718A0D4E000586A8E /* TACameraViewController.xib */; };
+		E786D51D18A0D55A00586A8E /* TAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E786D51B18A0D55A00586A8E /* TAMenuViewController.m */; };
+		E786D52118A0EECA00586A8E /* TACameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E786D52018A0EECA00586A8E /* TACameraOverlayView.m */; };
 		E7EB69ED1898ED0100FDF783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB69EC1898ED0100FDF783 /* Foundation.framework */; };
 		E7EB69EF1898ED0100FDF783 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB69EE1898ED0100FDF783 /* CoreGraphics.framework */; };
 		E7EB69F11898ED0100FDF783 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB69F01898ED0100FDF783 /* UIKit.framework */; };
@@ -64,6 +68,13 @@
 		E705752D189A274A000256BA /* TAImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAImageCell.m; path = Views/TAImageCell.m; sourceTree = "<group>"; };
 		E705752F189A324C000256BA /* TAImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAImageLoader.h; path = API/TAImageLoader.h; sourceTree = "<group>"; };
 		E7057530189A324C000256BA /* TAImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAImageLoader.m; path = API/TAImageLoader.m; sourceTree = "<group>"; };
+		E786D51518A0D4E000586A8E /* TACameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TACameraViewController.h; path = Controllers/TACameraViewController.h; sourceTree = "<group>"; };
+		E786D51618A0D4E000586A8E /* TACameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TACameraViewController.m; path = Controllers/TACameraViewController.m; sourceTree = "<group>"; };
+		E786D51718A0D4E000586A8E /* TACameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TACameraViewController.xib; path = Controllers/TACameraViewController.xib; sourceTree = "<group>"; };
+		E786D51A18A0D55A00586A8E /* TAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAMenuViewController.h; path = Controllers/TAMenuViewController.h; sourceTree = "<group>"; };
+		E786D51B18A0D55A00586A8E /* TAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAMenuViewController.m; path = Controllers/TAMenuViewController.m; sourceTree = "<group>"; };
+		E786D51F18A0EECA00586A8E /* TACameraOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TACameraOverlayView.h; path = Views/TACameraOverlayView.h; sourceTree = "<group>"; };
+		E786D52018A0EECA00586A8E /* TACameraOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TACameraOverlayView.m; path = Views/TACameraOverlayView.m; sourceTree = "<group>"; };
 		E7EB69E91898ED0100FDF783 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EB69EC1898ED0100FDF783 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7EB69EE1898ED0100FDF783 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -232,6 +243,8 @@
 		E7EB6A271898FDE700FDF783 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E786D51A18A0D55A00586A8E /* TAMenuViewController.h */,
+				E786D51B18A0D55A00586A8E /* TAMenuViewController.m */,
 				E7EB6A2F1899007800FDF783 /* TAMapViewController.h */,
 				E7EB6A301899007800FDF783 /* TAMapViewController.m */,
 				E7EB6A581899701300FDF783 /* TAContactsViewController.h */,
@@ -240,6 +253,9 @@
 				E7EB6A60189989AF00FDF783 /* TAAudioViewController.m */,
 				E7057529189A2703000256BA /* TAImagesViewController.h */,
 				E705752A189A2703000256BA /* TAImagesViewController.m */,
+				E786D51518A0D4E000586A8E /* TACameraViewController.h */,
+				E786D51618A0D4E000586A8E /* TACameraViewController.m */,
+				E786D51718A0D4E000586A8E /* TACameraViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +267,8 @@
 				E7EB6A6A18999DCA00FDF783 /* TAAudioFileCell.m */,
 				E705752C189A274A000256BA /* TAImageCell.h */,
 				E705752D189A274A000256BA /* TAImageCell.m */,
+				E786D51F18A0EECA00586A8E /* TACameraOverlayView.h */,
+				E786D52018A0EECA00586A8E /* TACameraOverlayView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -381,6 +399,7 @@
 				E7EB69F71898ED0100FDF783 /* InfoPlist.strings in Resources */,
 				E7EB6A441899060700FDF783 /* menu_download@2x.png in Resources */,
 				E7EB6A481899060700FDF783 /* menu_music@2x.png in Resources */,
+				E786D51918A0D4E000586A8E /* TACameraViewController.xib in Resources */,
 				E7EB6A001898ED0100FDF783 /* Main.storyboard in Resources */,
 				E7EB6A461899060700FDF783 /* menu_map@2x.png in Resources */,
 				E7EB6A3F1899060700FDF783 /* menu_camera.png in Resources */,
@@ -410,7 +429,10 @@
 				E7EB6A64189989FD00FDF783 /* TAAudioPlayer.m in Sources */,
 				E705752E189A274A000256BA /* TAImageCell.m in Sources */,
 				E7EB6A5A1899701300FDF783 /* TAContactsViewController.m in Sources */,
+				E786D51818A0D4E000586A8E /* TACameraViewController.m in Sources */,
 				E7EB6A61189989AF00FDF783 /* TAAudioViewController.m in Sources */,
+				E786D51D18A0D55A00586A8E /* TAMenuViewController.m in Sources */,
+				E786D52118A0EECA00586A8E /* TACameraOverlayView.m in Sources */,
 				E7057531189A324C000256BA /* TAImageLoader.m in Sources */,
 				E7EB6A571899126600FDF783 /* TAAnnotation.m in Sources */,
 			);

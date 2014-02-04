@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="-310" y="123"/>
         </scene>
-        <!--View Controller - Menu-->
+        <!--Menu View Controller - Menu-->
         <scene sceneID="5OD-oU-yFI">
             <objects>
-                <viewController id="zAo-UD-nMk" sceneMemberID="viewController">
+                <viewController id="zAo-UD-nMk" customClass="TAMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K0m-cc-j42"/>
                         <viewControllerLayoutGuide type="bottom" id="pHs-o4-H4g"/>
@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZET-yR-8KK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZET-yR-8KK">
                                 <rect key="frame" x="50" y="98" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -43,6 +43,9 @@
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="zAo-UD-nMk" eventType="touchUpInside" id="isG-Wi-KJN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYP-0S-lwk">
                                 <rect key="frame" x="170" y="98" width="100" height="100"/>
@@ -183,7 +186,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Eo-MT-Zrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="127"/>
+            <point key="canvasLocation" x="641" y="824"/>
         </scene>
         <!--Audio View Controller - Audio player-->
         <scene sceneID="rMM-6S-ZVR">
@@ -293,7 +296,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="612" y="-568"/>
+            <point key="canvasLocation" x="631" y="-568"/>
         </scene>
         <!--Map View Controller - Map-->
         <scene sceneID="v1o-ut-IZ3">
